@@ -1,0 +1,70 @@
+.top--story--container{
+    width: 90%;
+    margin: 0 auto;
+    & .story--container {
+        @include flexbox($dir:column);
+        @media(min-width:768px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1%;
+            & .story--outer--layer {
+                border-right: 1px solid $lineGrey;
+            }
+        }
+        & .story--wrap {
+            padding: 25px 0;
+            @media(min-width: 768px){
+                padding: 25px 14px;
+            }
+            & .story--title--wrap{
+                font-size: 20px;
+                letter-spacing: 0.1px;
+                margin-bottom: 8px;
+                line-height: 1.75rem;
+                font-weight: bold;
+            }
+            & .story--content {
+                font-size: 1rem;
+                line-height: 1.375rem;
+                font-style: normal;
+                letter-spacing: 0.1px;
+                color: $paraGrey;
+            }
+            & article:after {
+                content: '';
+                border-bottom: 1px solid $lineGrey;
+                display: block;
+                @media(min-width: 768px){
+                    display: none;
+                }
+
+            }
+            & .story--text--container {
+                padding: 20px 0;
+            }
+
+        } & .story--outer--layer {
+            &:nth-child(2) {
+                & .story--title--wrap {
+                    font-size: 20px;
+                }
+                
+            }
+            &:last-child {
+                border: none;
+                & .story--title--wrap {
+                    font-size: 20px;
+                }
+                & article:after {
+                    display: none; 
+                }
+            }
+        }
+    }
+    & .border-bottom {
+        margin-top:-10px;
+        @media(min-width: 768px) {
+            margin-top: 25px;
+        }
+    }
+}

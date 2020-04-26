@@ -1,0 +1,30 @@
+.footer--container {
+    width: 100%;
+    background: $bkGrey;
+    padding: 5%;
+    & .footer--content-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6%;
+        & .footer--logo--container{
+            @media(min-width: 768px){
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                gap: 20%;
+                & .copy--right--container {
+                    font-size: 10px;
+                }
+            }
+        }
+        & .footer--ul {
+            @media(min-width: 768px){
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                gap: 12%;
+                & .footer-li {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
