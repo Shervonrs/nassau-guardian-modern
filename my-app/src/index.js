@@ -2,47 +2,295 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './sass/styles.scss';
 import border from './assets/img/bordertop.png';
+// import background from './assets/img/facemask.jpg'
 const borderline = {backgroundImage:`url(${border})` }
 
-class Navigation extends React.Component{
+class Logo extends React.Component{
   render() {
     return (
-      <nav className="header-container container">
-        <div className="header-wrap">
-          <div className="header-icon">
-            <div className="icon-wrap">
-                <span className="menuIcon one"></span>
-                <span className="menuIcon two"></span>
-                <span className="menuIcon three"></span>
-              </div>
-            </div>
-            <div className="border border-top border-left border-no-margin" style={borderline}></div>
-            <div className="listItem logo-wrap">
-              <div className="logo-img">
-                <img src={require("./assets/img/logo-lg.png")} alt="Guardian logo"></img>
-              </div>
-            </div>
-            <nav className="nav-container">
-              <div className="nav">
-                <ul className="list-ul">
-                  <li className="listItem"></li>
-                  <li className="listItem">News</li>
-                  <li className="listItem">Perspective</li>
-                  <li className="listItem">Business</li>
-                  <li className="listItem"></li>
-                  <li className="listItem">Sports</li>
-                  <li className="listItem">LifeStyle</li>
-                  <li className="listItem">Opinion</li>
-                </ul>
-              </div>
-            </nav>
-            <div className="border border-bottom-1 border-2" style={borderline}></div>
-            <div className="border border-bottom-2 border-right border-no-margin" style={borderline}></div>
-        </div>
-      </nav>
-    
+      <section className="logo-container">
+        <button className="nav-button">
+          <span className="Icon"></span>
+        </button>
+        <a className="homepage--logo" href="#">
+          <div className="logo-container">
+            <img src={require("./assets/img/logo.svg")} alt="Guardian logo"></img>
+          </div>
+        </a> 
+      </section>
     )
   }
+}
+
+function Hero () {
+    return (
+      <header className="header-container">
+        <div className="Hero--container">
+          <a className="hero--link" href="#">
+            <div className="herotopStories-img">
+              <div>
+                <div className="heroTopStories--imageSpacer"></div>
+                <div>
+                  <div className="responsive-image-container">
+                    <div className="responsiveImg--spacer"></div>
+                    <picture className="hero-image">
+                      <source media="(min-width: 1240px)" srcSet={require('./assets/img/hospital-bed/care-1920.jpg')}></source>
+                      <source media="(min-width: 800px)" srcSet={require('./assets/img/hospital-bed/care-1280.jpg')}></source>
+                      <img src={require("./assets/img/hospital-bed/care-640.jpg")} alt="Guardian logo"></img>
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="heroTopStories-contentContainer">
+              <div className="heroTop-heading">
+                <h1 className="hero-title-container">
+                  <span className="hero-title">FIVE NEW CASES OF COVID-19</span>
+                </h1>
+                <div className="hero--author--container">
+                  <span className="hero--author-layer">
+                    <span>Jane Doe</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div className="navigation-bar--container">
+          <nav className="navigation-list-container">
+            <ul className="navBarCatergories">
+              <li className="navBarItem"><a href="#" className="navBarLink"></a>News</li>
+              <li className="navBarItem"><a href="#" className="navBarLink"></a>Perspective</li>
+              <li className="navBarItem"><a href="#" className="navBarLink"></a>Business</li>
+              <li className="navBarItem"><a href="#" className="navBarLink"></a>Sports</li>
+              <li className="navBarItem"><a href="#" className="navBarLink"></a>LifeStyle</li>
+              <li className="navBarItem"><a href="#" className="navBarLink"></a>Opinion</li>
+            </ul>
+            <ul className="navBarbuttons">
+              <li className="navBarButtonItem"><a href="#" className="navBarButtonLink"></a>About</li>
+              <li className="navBarButtonItem"><a href="#" className="navBarButtonLink"></a>Contact</li>
+            </ul>
+          </nav>
+        </div>
+        <div className="top--stories--container">
+          <div className="top--stories--wrapper">
+            <h2>Top Stories</h2>
+            <div className="top-stories-primaryList">
+              <a href="#" className="primary--container">
+                <div className="primary--container--img">
+                  <div>
+                    <div className="primary-layer-one"></div>
+                    <div className="primary-layer-two">
+                      <div className="responsiveContainer">
+                        <div className="responsive-spacer"></div>
+                        <picture className="element-picture">
+                          <img src="https://pbs.twimg.com/media/EUuOh7SXgAEJlgN?format=jpg&name=medium"></img>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="primary--container--text-block">
+                  <div className="primary--text--container">
+                    <h3 className="block--title--text">
+                      <span className="title-text">
+                        Ministry of Health moving to conduct rapid testing of COVID-19
+                      </span>
+                    </h3>
+                    <div className="author--text--container">
+                      <div className="author--wrapper">
+                        <span className="author--span-text"><span className="author--name">Jane Doe</span></span>
+                      </div>
+                    </div>
+                    <p className="primary--text--content">
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                      ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" className="primary--container">
+                <div className="primary--container--img">
+                  <div>
+                    <div className="primary-layer-one"></div>
+                    <div className="primary-layer-two">
+                      <div className="responsiveContainer">
+                        <div className="responsive-spacer"></div>
+                        <picture className="element-picture">
+                          <img src={require("./assets/img/govhouse.jpg")} alt="Guardian logo"></img>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="primary--container--text-block">
+                  <div className="primary--text--container">
+                    <h3 className="block--title--text">
+                      <span className="title-text">
+                        State of emergency extended to April 30
+                      </span>
+                    </h3>
+                    <div className="author--text--container">
+                      <div className="author--wrapper">
+                        <span className="author--span-text"><span className="author--name">Jane Doe</span></span>
+                      </div>
+                    </div>
+                    <p className="primary--text--content">
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                      ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" className="primary--container">
+                <div className="primary--container--img">
+                  <div>
+                    <div className="primary-layer-one"></div>
+                    <div className="primary-layer-two">
+                      <div className="responsiveContainer">
+                        <div className="responsive-spacer"></div>
+                        <picture className="element-picture">
+                          <img src={require("./assets/img/hardware.jpg")} alt="Guardian logo"></img>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="primary--container--text-block">
+                  <div className="primary--text--container">
+                    <h3 className="block--title--text">
+                      <span className="title-text">
+                      ‘PM Announces Hardware, Auto-parts Stores Allowed to Open’                      </span>
+                    </h3>
+                    <div className="author--text--container">
+                      <div className="author--wrapper">
+                        <span className="author--span-text"><span className="author--name">Jane Doe</span></span>
+                      </div>
+                    </div>
+                    <p className="primary--text--content">
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                      ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="top-stories-secondaryList">
+              <div className="secondary--container">
+                <div className="secondaryContainer-Item">
+                  <a href ="#"className="secondaryContainer-item-link">
+                    <div class="secondary--image--block">
+                      <div>
+                        <div>
+                          <div className="secondary-responsive-image">
+                            <div className="responsive-image--spacer">
+                              <picture className="image--container">
+                               <img src={require("./assets/img/exuma.jpg")} alt="Guardian logo"></img>
+                              </picture>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="secondary--text--block">
+                      <h4 className="secondary--title">
+                        <span>Man Killed in Exuma boating accident</span>
+                      </h4>
+                      <div className="author--text--container">
+                        <div className="author--wrapper">
+                          <span className="author--span-text"><span className="author--name">Jane Doe</span></span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="secondaryContainer-Item">
+                  <a href ="#"className="secondaryContainer-item-link">
+                    <div class="secondary--image--block">
+                      <div>
+                        <div>
+                          <div className="secondary-responsive-image">
+                            <div className="responsive-image--spacer">
+                              <picture className="image--container">
+                               <img src={require("./assets/img/shopping.jpg")} alt="Guardian logo"></img>
+                              </picture>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="secondary--text--block">
+                      <h4 className="secondary--title">
+                        <span>Food Stores Extend Hours</span>
+                      </h4>
+                      <div className="author--text--container">
+                        <div className="author--wrapper">
+                          <span className="author--span-text"><span className="author--name">Jane Doe</span></span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="secondaryContainer-Item">
+                  <a href ="#"className="secondaryContainer-item-link">
+                    <div class="secondary--image--block">
+                      <div>
+                        <div>
+                          <div className="secondary-responsive-image">
+                            <div className="responsive-image--spacer">
+                              <picture className="image--container">
+                               <img src={require("./assets/img/covid.jpg")} alt="Guardian logo"></img>
+                              </picture>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="secondary--text--block">
+                      <h4 className="secondary--title">
+                        <span>Data Reveals Covid-19 Links</span>
+                      </h4>
+                      <div className="author--text--container">
+                        <div className="author--wrapper">
+                          <span className="author--span-text"><span className="author--name">Jane Doe</span></span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="secondaryContainer-Item">
+                  <a href ="#"className="secondaryContainer-item-link">
+                    <div class="secondary--image--block">
+                      <div>
+                        <div>
+                          <div className="secondary-responsive-image">
+                            <div className="responsive-image--spacer">
+                              <picture className="image--container">
+                               <img src="http://bahamaspress.com/wp-content/uploads/2018/02/Brave-Davis.jpg"alt="Guardian logo"></img>
+                              </picture>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="secondary--text--block">
+                      <h4 className="secondary--title">
+                        <span>Davis Expelled from House</span>
+                      </h4>
+                      <div className="author--text--container">
+                        <div className="author--wrapper">
+                          <span className="author--span-text"><span className="author--name">Jane Doe</span></span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    )
 }
 
 class LeadStory extends React.Component {
@@ -347,17 +595,17 @@ class Footer extends React.Component {
           </div>
           <div className="footer--list--col one">
             <ul className="footer--ul">
-              <li class="footer-li">About</li>
-              <li class="footer-li">EDITORIAL POLICIES</li>
-              <li class="footer-li">BECOME A SOURCE</li>
-              <li class="footer-li">CONTACT</li>
-              <li class="footer-li">SUBSCRIBE</li>
+              <li className="footer-li">About</li>
+              <li className="footer-li">EDITORIAL POLICIES</li>
+              <li className="footer-li">BECOME A SOURCE</li>
+              <li className="footer-li">CONTACT</li>
+              <li className="footer-li">SUBSCRIBE</li>
             </ul>
           </div>
           <div className="footer--list--col two">
             <ul className="footer--ul">
-              <li class="footer-li">Terms of Use</li>
-              <li class="footer-li">Privacy</li>
+              <li className="footer-li">Terms of Use</li>
+              <li className="footer-li">Privacy</li>
             </ul>
           </div>
         </div>
@@ -377,16 +625,15 @@ class Main extends React.Component {
   render() {
     return (
       <main className="main">
-        <section className="headline">
-          <Navigation/> 
+        <Logo />
+        <section className="hero--container">
+          <Hero/> 
           <div className="date-container">
             <div className="date-wrap">
               <p>{this.currentDate()}</p>
             </div>
           </div>
-          <LeadStory/>
         </section>
-        <TopStory />
         <NewsSection />
         <Video />
         <Footer />
