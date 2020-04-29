@@ -9,11 +9,13 @@ class Logo extends React.Component{
   render() {
     return (
       <section className="logo-container">
-        <button className="nav-button">
+        <button className="nav-button homepage-button">
+          <span className="Icon"></span>
+          <span className="Icon"></span>
           <span className="Icon"></span>
         </button>
         <a className="homepage--logo" href="#">
-          <div className="logo-container">
+          <div className="logo-wrap">
             <img src={require("./assets/img/logo.svg")} alt="Guardian logo"></img>
           </div>
         </a> 
@@ -25,12 +27,12 @@ class Logo extends React.Component{
 function Hero () {
     return (
       <header className="header-container">
-        <div className="Hero--container">
+        <div className="heroContainer">
           <a className="hero--link" href="#">
             <div className="herotopStories-img">
-              <div>
+              <div className="heroTopStories-layer">
                 <div className="heroTopStories--imageSpacer"></div>
-                <div>
+                <div className="image--spacer-div">
                   <div className="responsive-image-container">
                     <div className="responsiveImg--spacer"></div>
                     <picture className="hero-image">
@@ -59,16 +61,16 @@ function Hero () {
         <div className="navigation-bar--container">
           <nav className="navigation-list-container">
             <ul className="navBarCatergories">
-              <li className="navBarItem"><a href="#" className="navBarLink"></a>News</li>
-              <li className="navBarItem"><a href="#" className="navBarLink"></a>Perspective</li>
-              <li className="navBarItem"><a href="#" className="navBarLink"></a>Business</li>
-              <li className="navBarItem"><a href="#" className="navBarLink"></a>Sports</li>
-              <li className="navBarItem"><a href="#" className="navBarLink"></a>LifeStyle</li>
-              <li className="navBarItem"><a href="#" className="navBarLink"></a>Opinion</li>
+              <li className="navBarItem"><a href="#" className="navBarLink">News</a></li>
+              <li className="navBarItem"><a href="#" className="navBarLink">Perspective</a></li>
+              <li className="navBarItem"><a href="#" className="navBarLink">Business</a></li>
+              <li className="navBarItem"><a href="#" className="navBarLink">Sports</a></li>
+              <li className="navBarItem"><a href="#" className="navBarLink">LifeStyle</a></li>
+              <li className="navBarItem"><a href="#" className="navBarLink">Opinion</a></li>
             </ul>
-            <ul className="navBarbuttons">
-              <li className="navBarButtonItem"><a href="#" className="navBarButtonLink"></a>About</li>
-              <li className="navBarButtonItem"><a href="#" className="navBarButtonLink"></a>Contact</li>
+            <ul className="navBarButtons">
+              <li className="navBarButtonItem"><a href="#" className="navBarButtonLink secondary"><span>About</span></a></li>
+              <li className="navBarButtonItem"><a href="#" className="navBarButtonLink primary"><span>Subscribe</span></a></li>
             </ul>
           </nav>
         </div>
@@ -78,13 +80,13 @@ function Hero () {
             <div className="top-stories-primaryList">
               <a href="#" className="primary--container">
                 <div className="primary--container--img">
-                  <div>
+                  <div className="primary-layer--container">
                     <div className="primary-layer-one"></div>
                     <div className="primary-layer-two">
                       <div className="responsiveContainer">
                         <div className="responsive-spacer"></div>
                         <picture className="element-picture">
-                          <img src="https://pbs.twimg.com/media/EUuOh7SXgAEJlgN?format=jpg&name=medium"></img>
+                          <img className="primary-pic" src="https://pbs.twimg.com/media/EUuOh7SXgAEJlgN?format=jpg&name=medium"></img>
                         </picture>
                       </div>
                     </div>
@@ -92,7 +94,7 @@ function Hero () {
                 </div>
                 <div className="primary--container--text-block">
                   <div className="primary--text--container">
-                    <h3 className="block--title--text">
+                    <h3 className="block--title--text container">
                       <span className="title-text">
                         Ministry of Health moving to conduct rapid testing of COVID-19
                       </span>
@@ -102,7 +104,7 @@ function Hero () {
                         <span className="author--span-text"><span className="author--name">Jane Doe</span></span>
                       </div>
                     </div>
-                    <p className="primary--text--content">
+                    <p className="primary--text--content summary">
                       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
                       ut labore et dolore magna aliquyam erat, sed diam voluptua.
                     </p>
@@ -111,21 +113,21 @@ function Hero () {
               </a>
               <a href="#" className="primary--container">
                 <div className="primary--container--img">
-                  <div>
+                  <div className="primary-layer--container">
                     <div className="primary-layer-one"></div>
                     <div className="primary-layer-two">
                       <div className="responsiveContainer">
                         <div className="responsive-spacer"></div>
                         <picture className="element-picture">
-                          <img src={require("./assets/img/govhouse.jpg")} alt="Guardian logo"></img>
+                          <img className="primary-pic" src={require("./assets/img/govhouse.jpg")} alt="Guardian logo"></img>
                         </picture>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="primary--container--text-block">
+                <div className="primary--container--text-block block">
                   <div className="primary--text--container">
-                    <h3 className="block--title--text">
+                    <h3 className="block--title--text container">
                       <span className="title-text">
                         State of emergency extended to April 30
                       </span>
@@ -135,7 +137,7 @@ function Hero () {
                         <span className="author--span-text"><span className="author--name">Jane Doe</span></span>
                       </div>
                     </div>
-                    <p className="primary--text--content">
+                    <p className="primary--text--content summary">
                       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
                       ut labore et dolore magna aliquyam erat, sed diam voluptua.
                     </p>
@@ -144,13 +146,13 @@ function Hero () {
               </a>
               <a href="#" className="primary--container">
                 <div className="primary--container--img">
-                  <div>
+                  <div className="primary-layer--container">
                     <div className="primary-layer-one"></div>
                     <div className="primary-layer-two">
                       <div className="responsiveContainer">
                         <div className="responsive-spacer"></div>
                         <picture className="element-picture">
-                          <img src={require("./assets/img/hardware.jpg")} alt="Guardian logo"></img>
+                          <img className="primary-pic" src={require("./assets/img/hardware.jpg")} alt="Guardian logo"></img>
                         </picture>
                       </div>
                     </div>
@@ -158,7 +160,7 @@ function Hero () {
                 </div>
                 <div className="primary--container--text-block">
                   <div className="primary--text--container">
-                    <h3 className="block--title--text">
+                    <h3 className="block--title--text container ">
                       <span className="title-text">
                       ‘PM Announces Hardware, Auto-parts Stores Allowed to Open’                      </span>
                     </h3>
@@ -167,7 +169,7 @@ function Hero () {
                         <span className="author--span-text"><span className="author--name">Jane Doe</span></span>
                       </div>
                     </div>
-                    <p className="primary--text--content">
+                    <p className="primary--text--content summary">
                       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
                       ut labore et dolore magna aliquyam erat, sed diam voluptua.
                     </p>
@@ -178,14 +180,15 @@ function Hero () {
             <div className="top-stories-secondaryList">
               <div className="secondary--container">
                 <div className="secondaryContainer-Item">
-                  <a href ="#"className="secondaryContainer-item-link">
-                    <div class="secondary--image--block">
-                      <div>
-                        <div>
+                  <a href ="#" className="secondaryContainer-item-link">
+                    <div className="secondary--image--block">
+                      <div className="secondary-layer">
+                        <div className="secondary-layer-one"></div>
+                        <div className="secondary-layer-two">
                           <div className="secondary-responsive-image">
                             <div className="responsive-image--spacer">
                               <picture className="image--container">
-                               <img src={require("./assets/img/exuma.jpg")} alt="Guardian logo"></img>
+                               <img className="secondary-pic" src={require("./assets/img/exuma.jpg")} alt="Guardian logo"></img>
                               </picture>
                             </div>
                           </div>
@@ -193,26 +196,25 @@ function Hero () {
                       </div>
                     </div>
                     <div className="secondary--text--block">
-                      <h4 className="secondary--title">
+                      <h4 className="secondary--title title">
                         <span>Man Killed in Exuma boating accident</span>
                       </h4>
                       <div className="author--text--container">
-                        <div className="author--wrapper">
-                          <span className="author--span-text"><span className="author--name">Jane Doe</span></span>
-                        </div>
+                        <span className="author--span-text"><span className="author--name">Jane Doe</span></span>
                       </div>
                     </div>
                   </a>
                 </div>
                 <div className="secondaryContainer-Item">
-                  <a href ="#"className="secondaryContainer-item-link">
-                    <div class="secondary--image--block">
-                      <div>
-                        <div>
+                  <a href ="#" className="secondaryContainer-item-link">
+                    <div className="secondary--image--block">
+                      <div className="secondary-layer">
+                        <div className="secondary-layer-one"></div>
+                        <div className="secondary-layer-two">
                           <div className="secondary-responsive-image">
                             <div className="responsive-image--spacer">
                               <picture className="image--container">
-                               <img src={require("./assets/img/shopping.jpg")} alt="Guardian logo"></img>
+                               <img className="secondary-pic" src={require("./assets/img/shopping.jpg")} alt="Guardian logo"></img>
                               </picture>
                             </div>
                           </div>
@@ -220,26 +222,25 @@ function Hero () {
                       </div>
                     </div>
                     <div className="secondary--text--block">
-                      <h4 className="secondary--title">
+                      <h4 className="secondary--title title">
                         <span>Food Stores Extend Hours</span>
                       </h4>
                       <div className="author--text--container">
-                        <div className="author--wrapper">
-                          <span className="author--span-text"><span className="author--name">Jane Doe</span></span>
-                        </div>
+                        <span className="author--span-text"><span className="author--name">Jane Doe</span></span>
                       </div>
                     </div>
                   </a>
                 </div>
                 <div className="secondaryContainer-Item">
-                  <a href ="#"className="secondaryContainer-item-link">
-                    <div class="secondary--image--block">
-                      <div>
-                        <div>
+                  <a href="#" className="secondaryContainer-item-link">
+                    <div className="secondary--image--block">
+                      <div className="secondary-layer">
+                        <div className="secondary-layer-one"></div>
+                        <div className="secondary-layer-two">
                           <div className="secondary-responsive-image">
                             <div className="responsive-image--spacer">
                               <picture className="image--container">
-                               <img src={require("./assets/img/covid.jpg")} alt="Guardian logo"></img>
+                               <img className="secondary-pic" src={require("./assets/img/covid.jpg")} alt="Guardian logo"></img>
                               </picture>
                             </div>
                           </div>
@@ -247,40 +248,35 @@ function Hero () {
                       </div>
                     </div>
                     <div className="secondary--text--block">
-                      <h4 className="secondary--title">
+                      <h4 className="secondary--title title">
                         <span>Data Reveals Covid-19 Links</span>
                       </h4>
                       <div className="author--text--container">
-                        <div className="author--wrapper">
-                          <span className="author--span-text"><span className="author--name">Jane Doe</span></span>
-                        </div>
+                        <span className="author--span-text"><span className="author--name">Jane Doe</span></span>
                       </div>
                     </div>
                   </a>
                 </div>
                 <div className="secondaryContainer-Item">
-                  <a href ="#"className="secondaryContainer-item-link">
-                    <div class="secondary--image--block">
-                      <div>
-                        <div>
+                  <a href ="#" className="secondaryContainer-item-link">
+                    <div className="secondary--image--block">
+                      <div className="secondary-layer">
+                        <div className="secondary-layer-two"></div>
                           <div className="secondary-responsive-image">
                             <div className="responsive-image--spacer">
                               <picture className="image--container">
-                               <img src="http://bahamaspress.com/wp-content/uploads/2018/02/Brave-Davis.jpg"alt="Guardian logo"></img>
+                               <img className="secondary-pic" src="http://bahamaspress.com/wp-content/uploads/2018/02/Brave-Davis.jpg"alt="Guardian logo"></img>
                               </picture>
                             </div>
                           </div>
-                        </div>
                       </div>
                     </div>
                     <div className="secondary--text--block">
-                      <h4 className="secondary--title">
+                      <h4 className="secondary--title title">
                         <span>Davis Expelled from House</span>
                       </h4>
                       <div className="author--text--container">
-                        <div className="author--wrapper">
-                          <span className="author--span-text"><span className="author--name">Jane Doe</span></span>
-                        </div>
+                        <span className="author--span-text"><span className="author--name">Jane Doe</span></span>
                       </div>
                     </div>
                   </a>

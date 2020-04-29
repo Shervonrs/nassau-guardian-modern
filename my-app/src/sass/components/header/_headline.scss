@@ -1,7 +1,7 @@
 .main {
-    @include flexbox($dir: column, $align-items: center);
-    max-width: 1300px;
-    margin: 0 auto;
+    @include flexbox($dir: column);
+    // max-width: 1300px;
+    // margin: 0 auto;
 }
 
 .date-container {
@@ -32,3 +32,342 @@
     font-weight: bold;
 }
 
+
+.logo-container {
+    width: 100%;
+    max-height: 100px;
+    position: absolute;
+    z-index: 4;
+    @media(min-width: 500px) {
+        padding-left: 20px;
+        padding-right: 20px;
+        background: transparent;
+    }
+    @media(min-width: 1240px) {
+        padding: 0;
+        width: 50%;
+        position: static;
+    }
+}
+
+.nav-button {
+    position: fixed;
+    right: 25px;
+    top: 15px;
+    z-index: 2;
+    &.homepage-button {
+        padding: 0;
+        appearance: none;
+        border: none;
+        color: $white;
+        font-size: 30px;
+        cursor: pointer;
+        background: transparent;
+        @media(min-width: 1240px) {
+            left: 25px;
+            top: 40px;
+            right: auto;
+            position: absolute;
+    
+        }
+        & .Icon {
+            font-family: sans-serif;
+            speak: none;
+            font-style: normal;
+            font-weight: 400;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            &:before {
+                content: "";
+                background: black;
+                display: block;
+                height: 3px;
+                width: 30px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+.homepage--logo {
+    display: block;
+    margin-top: 3px;
+    margin-left: 16px;
+    z-index: 2;
+    @media (min-width: 1240px){
+        position: absolute;
+        margin-left: 76px;
+        margin-top: 28px; 
+    }
+    & .logo-wrap{
+        display: inline-block;
+        width: 140px
+    }
+}
+
+
+
+.heroContainer {
+    position: relative;
+    height: 100vw;
+    width: 100%;
+    background: #000;
+    @media(min-width: 800px){
+        height: 50vw;
+    }
+    @media(min-width: 1240px){
+        height: 480px;
+    }
+    &:before {
+        content:"";
+        position: absolute;
+        width: 100%;
+        height: 170px;
+        left: 0;
+        top: 0;
+        opacity: .3;
+        z-index: 1;
+        background: linear-gradient(180deg,rgba(0,0,0,.98) 0,rgba(0,0,0,.92) 12%,rgba(0,0,0,.83) 21%,rgba(0,0,0,.7) 30%,rgba(0,0,0,.36) 48%,rgba(0,0,0,.25) 55%,rgba(0,0,0,.16) 63%,rgba(0,0,0,.05) 78%,transparent);
+        pointer-events: none;
+    }
+    & a {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        height: 246px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background: linear-gradient(180deg,transparent 0,rgba(0,0,0,.05) 22%,rgba(0,0,0,.17) 38%,rgba(0,0,0,.31) 49%,rgba(0,0,0,.65) 67%,rgba(0,0,0,.81) 77%,rgba(0,0,0,.91) 85%,rgba(0,0,0,.97) 97%,#000);
+        pointer-events: none;
+        @media(min-width: 1240px){
+            height: 286px;
+        }
+    }
+}
+
+.hero--link{
+    display: block;
+}
+
+.herotopStories-img{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0.9;
+    & .heroTopStories-layer {
+        position: relative;
+        & .heroTopStories--imageSpacer{
+            background: rgba(0, 0, 0, 0.05);
+            height: 0;
+            position: relative;
+            padding-bottom: 100%;
+            @media(min-width: 800px){
+                padding-bottom: 50vw;
+            }
+            @media(min-width: 1240px){
+                padding-bottom: 480px;
+            }    
+        }
+
+    }
+    & .image--spacer-div{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            line-height: 0;
+            @media(min-width: 1240px){
+                margin: 0 !important;
+                top: -30vw !important;
+            }
+            & .responsive-image-container{
+                display: block;
+                position: relative;
+                overflow: hidden;
+                max-width: 100%;
+                & .responsiveImg--spacer{
+                    padding-bottom: 100%;
+                    height: 0;
+                    width: 100%;
+                    @media(min-width: 1240px){
+                        padding-bottom: 73%;
+                    }
+                }
+                & picture{
+                    display: block;
+                    font-size: 0;
+                    line-height: 0;
+                    &.hero-image{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+            } 
+        }
+    }
+
+    .heroTopStories-contentContainer{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding: 20px;
+        z-index: 2;
+        @media(min-width: 500px) {
+            padding: 20px 40px;
+        }
+        @media(min-width:1240px) {
+            bottom: 28px;
+            padding: 20px;
+        }
+        & .heroTop-heading {
+            @media(min-width: 1240px){
+                margin: 0 auto; 
+                max-width: 1200px;
+                width: 100%;
+            }
+            & .hero-title-container{
+                display: block;
+                margin: 0 0 10px;
+                color: $white;
+                width: 100%;
+                z-index: 10;
+                font-family: Helvetica,Arial,sans-serif;
+                font-weight: 700;
+                font-size: 25px;
+                line-height: 25px;
+                text-transform: uppercase;
+                @media(min-width: 500px){
+                    font-size: 50px;
+                    line-height: 42px;
+                }
+                @media(min-width: 1240px){
+                    margin: 0 0 0.3em;
+                    width: 60%;
+                    line-height: .84;
+                }
+                & .hero--author--container{
+                    font-family: Helvetica,Arial,sans-serif;
+                    font-weight: 700;
+                    margin-bottom: 15px;
+                }
+            }
+            & .hero--author--container{
+                font-family: Andale Mono,monospace;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 13px;
+                & .hero--author-layer{
+                    color: $blue;
+                }
+            
+            }
+        }
+   
+    }
+
+    .navigation-bar--container{
+        @media(min-width: 1240px){
+            min-width: 1240px;
+            overflow: hidden;
+        }
+        & .navigation-list-container{
+            margin: 0 20px;
+            min-width: 0;
+            @media(min-width: 500px){
+                margin: 0 40px;
+            }
+            @media(min-width: 1240px){
+                @include flexbox($just: space-between);
+                height: 90px;
+                margin: auto;
+                max-width: 1200px;
+                overflow: visible;
+                position: relative;
+            }
+        }
+        & .navBarCatergories{
+            align-items: center;
+            display: none;
+            height: 90px;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            @media(min-width: 1240px){
+                display: inline-flex;
+            }
+            & .navBarItem{
+                display: flex;
+                margin-right: 41px;
+                padding-top: 2px;
+                & a {
+                    font-family: Tohama, sans-serif;
+                    font-weight: 700;
+                    font-style: normal;
+                    color: #111;
+                    font-size: 18px;
+                    line-height: 22px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        & .navBarButtons{
+            height: 90px;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            @media(min-width: 1240px){
+                display: inline-flex;
+                padding: 0; 
+                position: absolute;
+                right: 0;
+            }
+            & .navBarButtonItem{
+                display: none;
+                @media(min-width: 1240px){
+                    display: flex;
+                }
+                & .navBarButtonLink{
+                    align-items: center;
+                    display: flex;
+                    flex-direction: row;
+                    padding: 20px;
+                    width: 100%;
+                    font-family: TIActuBetaMono-Regular_web,Consolas,Andale Mono,monospace;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    font-weight: 700;
+                    letter-spacing: .5px;
+                    line-height: 22px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    &.secondary{
+                        background-color:#f2f2f2;
+                        color: #111;
+                    }
+                    &.primary{
+                        background-color: $blue;
+                        color:$white;
+                    }
+                }
+                &:last-of-type{
+                    display: block;
+                    width: 100%;
+                    @media(min-width: 1240px){
+                        display: flex;
+                        width: 240px;
+                    }
+                }
+            }
+        }
+    }
