@@ -22,7 +22,7 @@
             font-weight: bold;
             padding-top: 10px;
             border-top: 8px solid #fff;
-            color: black;
+            color: #464646;
             @media(min-width: 500px){
                 margin: 20px 40px .83em;
             }
@@ -62,6 +62,9 @@
         padding: 0;
     }
     & .primary--container{
+        &:hover{
+            color: $blue;
+        }
         display: block;
         margin: 20px 20px 40px;
         position: static;
@@ -181,19 +184,28 @@
                 }
                 & picture{
                     position: absolute;
-                    top: 0;
-                    left: -6%;
+                    top: 10%;
+                    left: 0%;
                     width: 100%;
-                    &:nth-child(2){
-                        left: -39%
-                    }
-                    &:nth-child(3){
-                        left: -45%
-                    }
                     & .primary-pic {
-                        width: 150%;
+                        width: 135%;
                     }
                 }
+            }
+        }
+        &:nth-child(1){
+            & .primary--container--img .responsiveContainer picture{
+                left: 0%;
+            }
+        }
+        &:nth-child(2){
+            & .primary--container--img .responsiveContainer picture{
+                left: -24%;
+            }
+        }
+        &:nth-child(3){
+            & .primary--container--img .responsiveContainer picture{
+                left: -35%;
             }
         }
         & .primary--container--text-block{
@@ -212,7 +224,7 @@
                 font-weight: 700;
                 font-style: normal;
                 line-height: 1.1;
-                color: black;
+                color:#464646;
                 position: relative; 
                 z-index: 1;
                 &.container{
@@ -245,7 +257,7 @@
                     height: 10px;
                     margin-bottom: 20px;
                     width: 80px;
-                    background: black
+                    background: #464646;
                 }
             }
             & .author--text--container{
@@ -353,19 +365,13 @@
         margin-bottom: 0;
     }
     &:before{
-        content: "";
-        display: block;
-        height: 10px;
-        margin-bottom: 20px;
-        width: 80px;
-        background: #111;
         @media(min-width: 1240px){
             content: "";
             display: block;
             height: 10px;
             margin-bottom: 20px;
             width: 80px;
-            background: #111;
+            background: #464646;
         }
     }   
 }
@@ -398,18 +404,13 @@
                 position: relative;
                 overflow: hidden;
                 max-width: 100%;
-                & .responsive-image-spacer{
+                & .responsive-image--spacer{
                     height: 0;
                     width: 100%;
-                    @media(min-width: 500px ){
-                        padding-bottom: 50%;
-                    }
-                    @media(min-width: 1240x ){
-                        padding-bottom: 100%;
-                    }
+                    padding-bottom: 100%;
                     & .image--container{
                         position: absolute;
-                        top: 57px;
+                        top: 0%;
                         left: 0;
                         width: 100%;
                     }                                        
@@ -419,6 +420,40 @@
             }
         }
     }
+}
+
+.secondaryContainer-Item{
+    &:nth-child(1){
+        & .secondary--image--block .secondary-layer picture{
+            & .secondary-pic{
+                width: 149%;
+            }
+        }
+    }
+    &:nth-child(2){
+        & .secondary--image--block .secondary-layer picture{
+            & .secondary-pic{
+                width: 148%;
+            }
+        }
+    }
+    &:nth-child(3){
+        & .secondary--image--block .secondary-layer picture{
+            left: -7%;
+            & .secondary-pic{
+                width: 176%;
+            }
+        }
+    }
+    &:nth-child(4){
+        & .secondary--image--block .secondary-layer picture{
+            left: -18%;
+            & .secondary-pic{
+                width: 166%;
+            }
+        }
+    }
+
 }
 
 .secondary--text--block{
@@ -435,7 +470,7 @@
         font-weight: 700;
         font-style: normal;
         line-height: 1.1;
-        color: #111;
+        color:#464646;
         position: relative;
         z-index: 1;
         &.title{

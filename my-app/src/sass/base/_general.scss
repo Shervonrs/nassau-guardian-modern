@@ -6,6 +6,15 @@
   a:link, a:visited, a:hover, a:active {
     text-decoration: none;
   }
+
+  a, a:focus{
+    color: inherit;
+    border: inherit;
+    outline:none;
+  } 
+  a:link{
+    text-decoration: none;
+  }
   
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,

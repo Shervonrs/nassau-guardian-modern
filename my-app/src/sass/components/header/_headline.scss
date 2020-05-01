@@ -1,7 +1,5 @@
 .main {
     @include flexbox($dir: column);
-    // max-width: 1300px;
-    // margin: 0 auto;
 }
 
 .date-container {
@@ -23,11 +21,12 @@
 
 .border {
     @include borderline;
-    margin: 30px 0;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1200px
 }
 
 .container--title {
-    font-size: 13px;
     padding: 0px 0 10px;
     font-weight: bold;
 }

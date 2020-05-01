@@ -1,6 +1,7 @@
 .media--container {
     width: 90%;
     margin: 0 auto;
+    max-width: 1200px;
     padding-bottom: 20vh;
     @media(min-width: 768px){
         padding-bottom: 15vh;
@@ -9,101 +10,92 @@
         @include flexbox($dir:column);
         @media(min-width: 768px) {
             display: grid;
-            grid-template-columns: 1fr 3fr;
+            grid-template-columns: 1fr 3fr 1fr;
             gap: 2%;
         }
-        & .radio--title--container {
-            padding: 0px 0px 10px;
-        }
-        & .radio--layer {
-            padding: 5%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 10%;
-            @media(min-width: 768px) {
-                padding: 0%;
-                margin: 0% 0%;
-            }
-            &.two {
-                 border-top: 1px solid #b3b3b3;
-                 @media(min-width: 768px){
-                     padding-top: 5%;
-                 }
-            }
-            & .radio--content-container {
-                display: grid;
-                grid-template-rows: 2fr 1fr;
-                gap: 0%;
-                font-weight: 700;
-                font-size: 14px;
-                line-height: 19px;
-            }
-        }
-    }
-    & .radio--container {
-        display: grid;
-        grid-template-rows: 0.5fr;
-        gap: 0%;
-        padding-bottom: 25px;
-        @media(min-width: 768px) {
-            padding-bottom: 0;
-            grid-template-rows: 1fr 11fr;
-        }
-        & .container--title{
-            padding: 5% 0;
-            @media(min-width: 768px) {
-                padding: 0%;
-            }
-        }
-        & .radio--content--wrapper{
-            @media(min-width: 768px){
-                height: 100%;
-                display: grid;
-                grid-template-rows:1fr 1fr;
-                border-top: 1px solid $lineGrey;
-                padding-top: 10%;
-            }
-        }
-    }
-    & .video--container {
-        display: grid;
-        grid-template-rows: 0fr 1fr;
-        gap: 5%;
-        border-top: 1px solid $lineGrey;
-        padding: 5% 0;
-        @media(min-width: 768px){
-            border-top: none;
-            padding: 0;
-        }
-        & .container--title {
-            padding: 0;
-            @media(min-width: 768px){
-                // padding-bottom: 2.5%;
-            }
-        }
-
-    }
-    & .video--wrapper {
-        display: grid;
-        grid-template-rows: 1fr;
-        padding: 5% 0% 4%;
-        gap: 5%;
-        @media(min-width: 768px){
-            display: none;
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-            gap: 3%;
-            padding:0;
-            & .primary--video--container {
-                border-top: 1px solid $lineGrey;
-                & .primary--wrapper {
-                    padding-top: 5%;
+        & .radio--container{
+            padding-bottom: 15%;
+            & .spacer--container {
+                padding: 3%;
+                @media(min-width: 768px){
+                    padding: 6%;
                 }
             }
-        } 
+            & .radio--content--wrapper{
+                @media(min-width: 768px){
+                    padding-bottom: 10%;
+                }
+                @media(min-width: 768px){
+                    height: 100%;
+                    display: grid;
+                    grid-template-rows: .5fr 1fr;
+                    border-top: 1px solid $lineGrey;
+                    padding-top: 15%;
+                }
+                & .radio--layer {
+                    display: grid;
+                    grid-template-columns: 2fr 1fr;
+                    grid-gap: 10%;
+                    @media(min-width: 768px) {
+                        margin: 0% 0%;
+                    }
+                    &.one{
+                        padding-bottom: 20%;
+                    }
+                    &.two {
+                        border-top: 1px solid #b3b3b3;
+                        @media(min-width: 768px){
+                            padding-top: 5%;
+                        }
+                    }
+                    & .radio--content-container {
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 19px;
+                        & .radio--content--title {
+                            padding-bottom: 15%;
+                            color:#464646;
+                        }
+                        & .time--slot--header {
+                            color: $blue
+                        }
+                    }
+                }
+            }
+        }
+        & .border{
+            display :none;
+        }
+        & .video--container{
+            & .border{
+                display: block;
+                @media(min-width: 768px){
+                    display: none;
+                }
+            }
+            & .spacer--container{
+                padding: 4%;
+                @media(min-width: 768px){
+                    padding: 2%;
+                }
+            }
+            & .video--wrapper {
+                @media(min-width: 768px){
+                    & .primary--video--container {
+                        border-top: 1px solid $lineGrey;
+                        & .primary--wrapper {
+                            padding-top: 3.7%;
+                        }
+                    }
+                } 
+            }
+        }
         & .secondary--video--container {
-            @media(min-width: 768px) {
-                border-top: 1px solid $lineGrey;
+            & .spacer--container {
+                padding: 3%;
+                @media(min-width: 768px){
+                    padding: 6%;
+                }
             }
             & .secondary--wrapper {
                 display: grid;
@@ -112,9 +104,13 @@
                 @media(min-width: 768px){
                     display: grid;
                     grid-template-rows: 1fr 1fr;
-                    gap: 0%;
+                    gap: 10%;
                     padding-top: 15%;
+                    border-top: 1px solid $lineGrey;
                 } 
+            }
+            & .filler--container{
+                visibility: hidden;
             }
             & .video-container {
                 & .sub-video-title {
@@ -123,6 +119,7 @@
                         padding-top: 2%;
                     }
                     & .sub--title--container{
+                        color: #464646;
                         font-size: 14px;
                         line-height: 19px;
                         font-weight: 700;
@@ -131,14 +128,12 @@
             }
         }
         & .prim--video--title{
+            color: #464646;
             font-size: 16px;
             font-weight: 700;
             @media(min-width: 768px){
                 text-align: center;
             }
         }
-        & .container--title {
-            padding: 0%;
-        }
     }
-}
+} 

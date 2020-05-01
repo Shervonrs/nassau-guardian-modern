@@ -261,7 +261,8 @@ function Hero () {
                   <a href ="#" className="secondaryContainer-item-link">
                     <div className="secondary--image--block">
                       <div className="secondary-layer">
-                        <div className="secondary-layer-two"></div>
+                        <div className="secondary-layer-one"></div>
+                        <div className="secondary-layer-two">
                           <div className="secondary-responsive-image">
                             <div className="responsive-image--spacer">
                               <picture className="image--container">
@@ -269,6 +270,7 @@ function Hero () {
                               </picture>
                             </div>
                           </div>
+                        </div>
                       </div>
                     </div>
                     <div className="secondary--text--block">
@@ -285,106 +287,9 @@ function Hero () {
             </div>
           </div>
         </div>
+        <div className="border border-bottom" style={borderline}></div>
       </header>
     )
-}
-
-class LeadStory extends React.Component {
-  render() {
-    return (
-      <div className="lead-story">
-        <div className="lead-content">
-          <div className="lead-title">
-           <h1 className="title-item">‘PM Announces Hardware, Auto-parts Stores Allowed to Open’</h1>
-          </div>
-          <ul className="lead-text">
-            <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-            <li>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-          </ul>
-        </div>
-        <div className="lead-img">
-          <img src={require("./assets/img/pm-Minnis.jpg")} alt="Guardian logo"></img>
-        </div>
-      </div>
-    )
-  }
-}
-
-class TopStory extends React.Component {
-  render() {
-    return (
-      <section className="top--story--container">
-        <div className="border border-top" style={borderline}></div>
-        <div className="container--title">
-          <h1>TOP STORIES</h1>
-        </div>
-        <div className="story--container">
-          <div className="story--outer--layer one">
-            <div className="story--wrap one">
-              <div className="story--img-container">
-                <img src={require("./assets/img/pm-mic.jpg")} alt="Pm Standing at Podium"></img>
-              </div>
-              <div className="story--content-container">
-                <article>
-                  <div className="story--text--container">
-                    <div className="story--title--wrap">
-                      <h2 className="story--title">Green Light to Reopen</h2>
-                    </div>
-                    <div className="story--content--container">
-                      <p className="story--content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-
-          <div className="story--outer--layer two">
-            <div className="story--wrap two">
-              <div className="story--img-container">
-                <img src={require("./assets/img/covid-test.jpg")} alt="Positive Covid Vile"></img>
-              </div>
-              <div className="story--content-container">
-                <article>
-                  <div className="story--text--container">
-                    <div className="story--title--wrap">
-                      <h2 className="story--title">Two More Cases Drive Count to 60</h2>
-                    </div>
-                    <div className="story--content--container">
-                      <p className="story--content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-
-          <div className="story--outer--layer three">
-            <div className="story--wrap three">
-              <div className="story--img-container">
-                <img src={require("./assets/img/davis.jpg")} alt="Deputy PM Davis"></img>
-              </div>
-              <div className="story--content-container">
-                <article>
-                  <div className="story--text--container">
-                    <div className="story--title--wrap">
-                      <h2 className="story--title">A Study in Confusion</h2>
-                    </div>
-                    <div className="story--content--container">
-                      <p className="story--content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div className="border border-bottom" style={borderline}></div>
-      </section>
-    )
-  }
 }
 
 class NewsSection extends React.Component {
@@ -392,7 +297,7 @@ class NewsSection extends React.Component {
     return (
       <section className="news--section--container">
         <div className="container--title">
-          <h1>PERSPECTIVE</h1>
+          <h1>Perspective</h1>
         </div>
         <div className="story--container">
           <div className="story--wrapper">
@@ -412,12 +317,12 @@ class NewsSection extends React.Component {
             <div className="secondary--column">
               <div className="secondary--sub--container one">
                 <div className="sub--img--container">
-                  <img src={require("./assets/img/parliament.jpg")} alt="Parlament"></img>
+                  <img src={require("./assets/img/road.jpg")} alt="Parlament"></img>
                 </div>
                 <div className="sub--content--container">
                   <div className="sub--content--title">
                     <h4>
-                      <span className="sub--title">Politicians and Their Finances</span>
+                      <span className="sub--title">The Long Road Home</span>
                       {/* <span className="sub--content">amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</span> */}
                     </h4>
                   </div>
@@ -428,7 +333,7 @@ class NewsSection extends React.Component {
               </div>
               <div className="secondary--sub--container two">
                 <div className="sub--img--container">
-                  <img src={require("./assets/img/parliament.jpg")} alt="Parlament"></img>
+                  <img src={require("./assets/img/money.jpg")} alt="Parlament"></img>
                 </div>
                 <div className="sub--content--container">
                   <div className="sub--content--title">
@@ -444,12 +349,12 @@ class NewsSection extends React.Component {
               </div>
               <div className="secondary--sub--container three">
                 <div className="sub--img--container">
-                  <img src={require("./assets/img/parliament.jpg")} alt="Parlament"></img>
+                  <img src={require("./assets/img/protest.jpg")} alt="Parlament"></img>
                 </div>
                 <div className="sub--content--container">
                   <div className="sub--content--title">
                     <h4>
-                      <span className="sub--title">Politicians and Their Finances</span>
+                      <span className="sub--title title">Stand for Something</span>
                       {/* <span className="sub--content">amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</span> */}
                     </h4>
                   </div>
@@ -475,9 +380,10 @@ class Video extends React.Component {
           <div className="radio--container">
             <div className="container--title">
               <h1 className="radio--title">
-                <span className="title">RADIO</span>
+                <span className="title">Radio</span>
               </h1>
             </div>
+            <div className="spacer--container"></div>
             <div className="radio--content--wrapper">
               <div className="radio--layer one">
                 <div className="img--container">
@@ -514,15 +420,16 @@ class Video extends React.Component {
                   </div>
                 </div>
               </div>
-        
             </div>
           </div>
           <div className="video--container">
+            <div className="border border-bottom" style={borderline}></div>
             <div className="container--title">
               <h1 className="video--title">
-                <span className="title">VIDEO</span>
+                <span className="title">Video</span>
               </h1>
             </div>
+            <div className="spacer--container"></div>
             <div className="video--wrapper">
               <div className="primary--video--container">
                 <div className="primary--wrapper">
@@ -538,35 +445,37 @@ class Video extends React.Component {
                   </div>
                 </div>
               </div>
-              <div className="secondary--video--container">
-                <div className="secondary--wrapper">
-                  <div className="video-container one">
-                    <div className="sub-video-container">
-                      <video controls className="sub-video">
-                        <source src="https://tng-video.s3.amazonaws.com/PMH+REPORT+-+Jan+20%2C+2020.mp4"></source>
-                      </video>
-                    </div>
-                    <div className="sub-video-title">
-                      <h3 className="sub--title--container">
-                        <span className="sub--title">PMH Prospective Redevelopment Plan</span>
-                      </h3>
-                    </div>
-                  </div>
-
-                  <div className="video-container two">
-                    <div className="sub-video-container">
-                      <video controls className="sub-video">
-                        <source src="https://tng-video.s3.amazonaws.com/Philip+Davis+-+Bahamasair+-+Jan+3%2C+2020.mp4"></source>
-                      </video>
-                    </div>
-                    <div className="sub-video-title">
-                      <h3 className="sub--title--container">
-                        <span className="sub--title">Davis: Minnis administration Dropped the Ball on Bahamasair</span>
-                      </h3>
-                    </div>
-                  </div>
+            </div>
+          </div>
+          <div className="secondary--video--container">
+            <div className="filler--container container--title">
+              <h1>hh</h1>
+            </div>
+            <div className="spacer--container"></div>
+            <div className="secondary--wrapper">
+              <div className="video-container one">
+                <div className="sub-video-container">
+                  <video controls className="sub-video">
+                    <source src="https://tng-video.s3.amazonaws.com/PMH+REPORT+-+Jan+20%2C+2020.mp4"></source>
+                  </video>
                 </div>
-
+                <div className="sub-video-title">
+                  <h3 className="sub--title--container">
+                    <span className="sub--title">PMH Prospective Redevelopment Plan</span>
+                  </h3>
+                </div>
+              </div>
+              <div className="video-container two">
+                <div className="sub-video-container">
+                  <video controls className="sub-video">
+                    <source src="https://tng-video.s3.amazonaws.com/Philip+Davis+-+Bahamasair+-+Jan+3%2C+2020.mp4"></source>
+                  </video>
+                </div>
+                <div className="sub-video-title">
+                  <h3 className="sub--title--container">
+                    <span className="sub--title">Davis: Minnis administration Dropped the Ball on Bahamasair</span>
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
@@ -624,11 +533,11 @@ class Main extends React.Component {
         <Logo />
         <section className="hero--container">
           <Hero/> 
-          <div className="date-container">
+          {/* <div className="date-container">
             <div className="date-wrap">
               <p>{this.currentDate()}</p>
             </div>
-          </div>
+          </div> */}
         </section>
         <NewsSection />
         <Video />

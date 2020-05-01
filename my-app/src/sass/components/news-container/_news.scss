@@ -1,5 +1,34 @@
 
-.news--section--container { 
+h1 {
+    font-size: 38px;
+    line-height: 38px;
+    // margin: 20px 20px 40px;
+    font-weight: bold;
+    // padding-top: 10px;
+    // border-top: 8px solid #fff;
+    color:#464646;
+    @media(min-width: 500px){
+        // margin: 20px 40px .83em;
+    }
+    @media(min-width: 1240px){
+        // margin: 20px;
+        font-size: 50px;
+        line-height: 42px;
+    }
+    @media(min-width: 1240px){
+        // margin: 40px 0;
+        // padding: 0;
+        width: 100%;
+        border-top: none;
+        font-size: 56px;
+        text-align: left;
+    }
+}
+.news--section--container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-bottom: 1%; 
     & .story--container {
         padding: 25px 0;
     }
@@ -10,10 +39,11 @@
             gap: 4%;
         }
     }
-    width: 90%;
-    margin: 0 auto;
     & .border-bottom {
         margin: 0;
+    }
+    & .border {
+        width: 100%;
     } 
 
     & .main--column {
@@ -23,11 +53,20 @@
                 padding: 5% 0;
             }
             & .main--title {
-                margin: 0 0 2%;
-                font-size: 18px;
-                font-weight: 600;
-                line-height: 25px;
+                font-size: 24px;
+                line-height: 30px;
+                margin-bottom: 4%;
+                font-weight: bold;
+                color:#464646;
                 text-transform: capitalize;
+                @media(min-width: 1240px){
+                    padding: 0;
+                    width: 100%;
+                    border-top: none;
+                    font-size: 40px;
+                    line-height: 47px;
+                    text-align: left;
+                }
             }
             & .writer-container {
                 font-style: normal;
@@ -49,11 +88,33 @@
             gap: 10%;
             & .sub--content--container {
                 @include flexbox($dir: column, $just: space-around);
-                & .sub--content--title {
-                    font-size: 16px;
+                & .sub--content--title h4 {
+                    margin: 0;
+                    font-family: TIActuBeta-ExBold_web,Tahoma,sans-serif;
                     font-weight: 700;
+                    font-style: normal;
                     line-height: 1.1;
-                    margin: 0 0 10px;
+                    color: #464646;
+                    position: relative;
+                    z-index: 1;
+                    @media(min-width: 500px){
+                        font-size: 20px;
+                        line-height: 22px;
+                    }
+                    & .title{
+                        margin: 0 0 10px;
+                        font-size: 18px;
+                        line-height: 1.1;
+                    }
+                }
+                & .writer-container{
+                    font-family: TIActuBetaMono-Regular_web,Consolas,Andale Mono,monospace;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 13px;
+                    & .sub--author{
+                        color:$blue;
+                    }
                 }
             }
         }
