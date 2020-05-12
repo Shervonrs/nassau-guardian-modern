@@ -803,7 +803,7 @@ const TOPSTORIES = [
         author: 'Jane Doe',
       },
       {
-        img: <img className="secondary-pic" src="http://bahamaspress.com/wp-content/uploads/2018/02/Brave-Davis.jpg" atl="Deputy PM Phillip Davis"></img>,
+        img: <img className="secondary-pic" src={require("./assets/img/davis.jpg")} atl="Deputy PM Phillip Davis"></img>,
         title: 'Davis Expelled from House',
         author: 'Jane Doe',
       }
